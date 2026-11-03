@@ -156,7 +156,8 @@ If not, it goes.
 
 ## 7. Tell vocabulary
 
-Swap every one of these for the plain word.
+Use the plain word when it preserves the meaning.
+Keep literal technical terms, identifiers, and quoted wording accurate, including a word listed here when it has a precise domain meaning.
 The left column is what a model reaches for; the right is what a person says.
 
 | Model word | Say |
@@ -184,6 +185,11 @@ The left column is what a model reaches for; the right is what a person says.
 | ensure | make sure |
 | facilitate | help, let |
 | myriad, plethora | many, or the count |
+| serves as, stands as | is |
+| boasts | has |
+| in order to | to |
+| due to the fact that | because |
+| significantly, dramatically, remarkably | the measured change, or drop it |
 
 Same rule for the jargon register: a short sentence made of spec vocabulary is not simple.
 "JavaScript loses digits above 2^53" is the target.
@@ -251,3 +257,59 @@ If nothing needs the reader, the sentence is "nothing to do."
 **Fix:** one hedge maximum, and only when the uncertainty is real and changes what the reader does.
 Otherwise state it flat.
 If you don't know, say you don't know.
+
+---
+
+## 13. Unsupported authority and significance
+
+**Banned:** vague authority such as "experts agree" or "research shows" without an identifiable source, and claims such as "a milestone" with no stated consequence.
+Trailing phrases such as "showcasing our commitment" often add a claim the preceding fact cannot support.
+
+**Fix:** keep the observed fact and its supported consequence.
+Name and link a source already available, or flag the evidence gap separately.
+Keep a trailing phrase when it states a real condition or result, such as "preventing duplicate writes" when the mechanism supports that claim.
+
+---
+
+## 14. Synonym cycling and abstract metaphors
+
+**Banned:** renaming one thing across a paragraph to avoid repetition, or dressing up an ordinary action with an abstract metaphor.
+Calling one check a "gate", a "ratchet", and a "guardrail" makes the reader work out whether there are three checks.
+
+**Fix:** use one name for each thing and the real symbol, flag, or command when it matters.
+Use "move" for moving code and "shared library" for a library described as a "substrate".
+Keep established domain terms such as a mathematical vector or a test harness when they identify the thing accurately.
+
+---
+
+## 15. False ranges
+
+**Banned:** "from X to Y" when the endpoints imply a scale or progression that the facts do not establish.
+
+**Fix:** name the actual items or scope.
+Keep real ranges, including dates, versions, measured values, and a genuine sequence of steps.
+
+---
+
+## 16. Chatbot pleasantries and flattery
+
+**Banned:** reflexive openers such as "certainly", flattery such as "great question", exaggerated agreement, and generic closers such as "I hope this helps".
+
+**Fix:** begin with the answer and end with the last useful fact or action.
+Keep a specific thanks, acknowledgment of impact, or real offer when it serves the relationship.
+Tell 5 covers the wording of that offer.
+
+---
+
+## 17. Over-compression
+
+**Banned:** dropping articles, verbs, or conditions until the reader has to decode the line.
+
+> Parser rejects bad date → exit 2, no write.
+
+**Fix:** keep a complete sentence with the behavior intact.
+
+> The parser rejects an invalid date, exits with code 2, and writes nothing.
+
+Compact status lines with clear before-and-after values remain useful, as tell 1 describes.
+In explanations and instructions, spell out the relationship and keep the words that make it unambiguous.

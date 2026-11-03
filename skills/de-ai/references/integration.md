@@ -10,6 +10,10 @@ They read it through the installed path below, so `de-ai` has to be installed fo
 
 ## What the wiring is
 
+The technical-writing and fidelity checks below are implemented in [cto-filter PR #1](https://github.com/muratkeremozcan/cto-filter/pull/1),
+in the [skill at commit d4a53d9](https://github.com/muratkeremozcan/cto-filter/blob/d4a53d91fbfdf9a9f8bf8492fd35126bdc20c5c3/skills/cto-filter/SKILL.md).
+Update the installed companion to that version after the de-ai change lands.
+
 `cto-filter` ends with this layer, after the executive gates, signal placement, and its own filter-specific voice checks:
 
 ```markdown
@@ -21,6 +25,10 @@ Load `~/.claude/skills/de-ai/references/ai-tells.md` and
 voice, line structure. Those two files own the dash, antithesis, slogan, label-colon,
 blockquote, and formatting rules, so this skill does not restate them.
 
+For technical prose, also load `~/.claude/skills/de-ai/references/technical-writing.md`
+and apply its sentence checks. Use its document modes for documentation only; keep
+messages in their channel's form and length.
+
 Two things this filter has gotten wrong before, so check them explicitly on the way out:
 - Tightening a soft offer must not introduce calendar-bot phrasing. "happy to pair if useful"
   became "want to grab 30 minutes this week?" and that was worse. See tell 5.
@@ -29,10 +37,18 @@ Two things this filter has gotten wrong before, so check them explicitly on the 
 
 Fold the tells found into the gate results as one line with the count. Any unfixed tell makes
 the verdict REVISE.
+After the voice edit, confirm that the rewrite preserves the original conditions, completion
+states, ownership, uncertainty, and requested decision.
+Keep missing evidence visible in the verdict and evidence gaps; a shorter draft cannot resolve
+an UNKNOWN gate.
 ```
 
 Its inline voice-pass list keeps only the checks `ai-tells.md` does not cover: owner naming, `guess`/`hope`/`should`, peer-message length, and unsupported claims.
 The tell rules live in `ai-tells.md` alone, so a change there reaches both filters.
+For technical prose, `cto-filter` also loads `~/.claude/skills/de-ai/references/technical-writing.md`.
+Its sentence checks clarify conditions, actors, terminology, and references; document modes stay limited to documentation.
+After the voice edit, the filter checks that ownership, completion states, conditions, uncertainty, and the requested decision survived.
+An evidence gap remains visible in the verdict even when the shortened draft omits the unsupported claim.
 
 `communication-filter` preloads `cto-filter` through its `skills:` frontmatter and inherits the layer.
 Its output contract adds one section:

@@ -1,6 +1,6 @@
 ---
 name: de-ai
-description: Strip AI tells from writing, prune it hard and rewrite it in Murat's voice. PR descriptions get a BLUF of the what and the why, no testing section and no tool attribution. Fires on "de-ai this", "de-AI it", "de-ai the PR", "does this sound AI", "make this sound human", "murat-ify this", or before posting any PR description or sending any human-facing text. Also runs as the voice layer inside cto-filter and communication-filter.
+description: Strip AI tells from writing, prune it hard and rewrite it in Murat's voice. PR descriptions get a BLUF of the what and the why, no testing section and no tool attribution. Use when the user says "de-ai this", "de-AI it", "de-ai the PR", "does this sound AI", "make this sound human", "murat-ify this", or before posting any PR description or sending any human-facing text. Also runs as the voice layer inside cto-filter and communication-filter.
 ---
 
 # de-ai
@@ -37,6 +37,8 @@ Load these before editing anything.
 
 - `references/ai-tells.md`: the universal ban list of words, sentence shapes, structure, and formatting.
 - `references/murat-voice.md`: his own recorded corrections, and the positive shape to write in.
+- `references/technical-writing.md`, for technical prose, including docs, RFCs, READMEs, procedures, and PR descriptions.
+  Its sentence checks apply to technical messages too; its document modes apply only to documentation.
 - `references/pr-descriptions.md`, when the text is a PR description or a commit message.
   Its shape, length targets and delete list override the general targets in `murat-voice.md`.
 
@@ -56,13 +58,15 @@ A single combined read misses things; the antithesis rule in particular has surv
    Then run the delete test on every line that is left: would the reader miss it?
    If not, it goes.
    When he wrote the draft, the target is his length or shorter.
-   When a model wrote it, expect half the length or less; a rewrite longer than that means the pass stopped early, so run it again.
+   When a model wrote it, aim for half the length or less and retry the bloat pass if the draft stays longer.
+   Keep the facts, qualifications, and instructions the reader needs even when that puts the result above the length target.
    He had to follow nearly every run with "prune further" until 2026-10-29.
    The first version you hand back is the pruned one.
 3. **Voice pass.**
    Simplify vocabulary as well as length.
    A short sentence made of jargon is still wrong.
    The test is whether it survives being said out loud at a whiteboard.
+   Keep natural variation in sentence length and the writer's supported opinions; leave real technical names intact.
 4. **Line-structure pass.**
    One complete sentence per line; never wrap mid-clause to hit a line length.
    When a sentence must break, break after punctuation (period, comma, semicolon, colon) so every line ends on the mark and no line opens mid-thought.
@@ -74,6 +78,7 @@ A single combined read misses things; the antithesis rule in particular has surv
 On any draft longer than a page, run pass 1 a second time at the end.
 Rewrites reintroduce the dash and the antithesis; that has happened three times on record.
 On the second pass, read every sentence you edited in pass 1 and check the rejected half is gone from the page; a stronger negation in its place counts as unfixed.
+Before returning any rewrite, compare it with the source for changed facts, lost conditions, invented claims, and prose that became harder to read.
 
 ## Step 3: hand it back
 
