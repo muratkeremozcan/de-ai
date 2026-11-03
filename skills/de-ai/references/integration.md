@@ -33,6 +33,10 @@ the verdict REVISE.
 
 Its inline voice-pass list keeps only the checks `ai-tells.md` does not cover: owner naming, `guess`/`hope`/`should`, peer-message length, and unsupported claims.
 The tell rules live in `ai-tells.md` alone, so a change there reaches both filters.
+For technical prose, `cto-filter` also loads `~/.claude/skills/de-ai/references/technical-writing.md`.
+Its sentence checks clarify conditions, actors, terminology, and references; document modes stay limited to documentation.
+After the voice edit, the filter checks that ownership, completion states, conditions, uncertainty, and the requested decision survived.
+An evidence gap remains visible in the verdict even when the shortened draft omits the unsupported claim.
 
 `communication-filter` preloads `cto-filter` through its `skills:` frontmatter and inherits the layer.
 Its output contract adds one section:

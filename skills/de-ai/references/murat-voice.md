@@ -18,6 +18,9 @@ Too long, too fluffy, definitely not Murat style."
 The second was already down to five short sentences and still failed: "so long that I can't even read it."
 Five plain sentences was still the wrong form.
 
+Keep the articles, verbs, and conditions needed to understand the surviving facts on the first read.
+A length target never justifies losing a warning, prerequisite, decision, or required action.
+
 **Targets by audience:**
 
 | Writing to | Target |
@@ -72,6 +75,16 @@ The pr-gate explanation he finally approved, after several rejected passes, had 
 
 Concrete numbers, no qualifiers.
 That is the register.
+
+## Preserve what the writer knows
+
+Keep names, numbers, units, dates, links, technical identifiers, and the scope of each claim accurate.
+Preserve distinctions between a plan, an estimate, an observation, and a completed result.
+Keep uncertainty when the source is uncertain; a voice edit cannot turn a possibility into a guarantee.
+Flag an unsupported claim separately and request its source when needed; never invent a citation or silently replace it with a stronger claim.
+First person and opinions can stay when they belong to the writer.
+Add no personal experience, feeling, anecdote, or deliberate mistake to make the prose sound human.
+Vary sentence length with the thought; keep a longer sentence when its condition and consequence belong together.
 
 ---
 

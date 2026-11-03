@@ -6,10 +6,13 @@ PR descriptions get a BLUF of the what and the why, no testing section and no to
 - `skills/de-ai/SKILL.md`: the entrypoint, with its carve-outs, four passes and output contract.
 - `skills/de-ai/references/ai-tells.md`: the ban list of words, sentence shapes, structure and formatting.
 - `skills/de-ai/references/murat-voice.md`: his recorded corrections and the shape to write in.
+- `skills/de-ai/references/technical-writing.md`: technical clarity checks and documentation purposes, loaded for technical prose.
 - `skills/de-ai/references/pr-descriptions.md`: PR description and commit message rules.
 - `skills/de-ai/references/integration.md`: how `cto-filter` and `communication-filter` call this skill as their voice layer.
+- `skills/de-ai/evals/triggers.json`: trigger queries for future evaluation; these are separate from the contract tests.
 - `scripts/install.sh`: links the skill into each host's discovery folder.
 - `docs/source-provenance.md`: where the skill came from.
+- `docs/upstream-comparison.md`: the Unslop and technical-writing comparison and adoption decisions.
 
 ## Install
 

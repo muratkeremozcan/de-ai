@@ -1,0 +1,66 @@
+[
+  {
+    "query": "de-ai this: This pivotal milestone underscores our commitment to a seamless experience.",
+    "should_trigger": true
+  },
+  {
+    "query": "Does this sound AI? The compiler serves as a robust substrate for every workflow.",
+    "should_trigger": true
+  },
+  {
+    "query": "Make this README paragraph sound human while keeping the flag names and warnings exact.",
+    "should_trigger": true
+  },
+  {
+    "query": "Murat-ify this technical update. Keep the uncertainty about the release date.",
+    "should_trigger": true
+  },
+  {
+    "query": "de-ai the PR description and keep the bot-owned block untouched.",
+    "should_trigger": true
+  },
+  {
+    "query": "Run the de-ai voice layer on this cto-filter draft after its evidence gates.",
+    "should_trigger": true
+  },
+  {
+    "query": "Before sending this rollout email, cut the filler and keep the owner's decision and prerequisites.",
+    "should_trigger": true
+  },
+  {
+    "query": "de-AI it: a prompt for another LLM. Tell me whether your carve-out applies.",
+    "should_trigger": true
+  },
+  {
+    "query": "Rename the parser variable ai_tells to prose_patterns in this Python module. Change code only.",
+    "should_trigger": false
+  },
+  {
+    "query": "Implement a date parser that exits with code 2 on invalid input. Do not edit the documentation.",
+    "should_trigger": false
+  },
+  {
+    "query": "Validate the JSON payload consumed by another service and return the corrected JSON only.",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate a machine-to-machine OpenAPI schema from these endpoint definitions. Return schema only.",
+    "should_trigger": false
+  },
+  {
+    "query": "Search the source code for the literal string 'experts agree' and return matching paths only.",
+    "should_trigger": false
+  },
+  {
+    "query": "Calculate this matrix's eigenvectors and return the numerical arrays only.",
+    "should_trigger": false
+  },
+  {
+    "query": "Convert this configuration from YAML to JSON without changing string values. Return JSON only.",
+    "should_trigger": false
+  },
+  {
+    "query": "Change the CI workflow to run on Python 3.13. Edit only the workflow YAML.",
+    "should_trigger": false
+  }
+]
