@@ -67,6 +67,9 @@ That closes the conflict between aggressive pruning and the new over-compression
 The filter previously checked tells after its gates without explicitly checking whether that rewrite changed a decision or completion claim.
 It now compares conditions, ownership, uncertainty, completion states, and the requested decision after the voice pass.
 The shared technical reference supplies the same sentence rules to both skills.
+These companion checks are implemented in [cto-filter PR #1](https://github.com/muratkeremozcan/cto-filter/pull/1),
+with [the skill pinned at d4a53d9](https://github.com/muratkeremozcan/cto-filter/blob/d4a53d91fbfdf9a9f8bf8492fd35126bdc20c5c3/skills/cto-filter/SKILL.md).
+They require that companion version; merge de-ai first, then update the installed cto-filter checkout.
 
 For example, the sentence "If the source is uncertain, the rewrite may keep that uncertainty" must retain both the condition and the possibility.
 A shorter sentence that promises certainty would change the claim.

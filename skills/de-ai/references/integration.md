@@ -10,6 +10,10 @@ They read it through the installed path below, so `de-ai` has to be installed fo
 
 ## What the wiring is
 
+The technical-writing and fidelity checks below are implemented in [cto-filter PR #1](https://github.com/muratkeremozcan/cto-filter/pull/1),
+in the [skill at commit d4a53d9](https://github.com/muratkeremozcan/cto-filter/blob/d4a53d91fbfdf9a9f8bf8492fd35126bdc20c5c3/skills/cto-filter/SKILL.md).
+Update the installed companion to that version after the de-ai change lands.
+
 `cto-filter` ends with this layer, after the executive gates, signal placement, and its own filter-specific voice checks:
 
 ```markdown
