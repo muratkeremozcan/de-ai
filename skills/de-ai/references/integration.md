@@ -21,6 +21,10 @@ Load `~/.claude/skills/de-ai/references/ai-tells.md` and
 voice, line structure. Those two files own the dash, antithesis, slogan, label-colon,
 blockquote, and formatting rules, so this skill does not restate them.
 
+For technical prose, also load `~/.claude/skills/de-ai/references/technical-writing.md`
+and apply its sentence checks. Use its document modes for documentation only; keep
+messages in their channel's form and length.
+
 Two things this filter has gotten wrong before, so check them explicitly on the way out:
 - Tightening a soft offer must not introduce calendar-bot phrasing. "happy to pair if useful"
   became "want to grab 30 minutes this week?" and that was worse. See tell 5.
@@ -29,6 +33,10 @@ Two things this filter has gotten wrong before, so check them explicitly on the 
 
 Fold the tells found into the gate results as one line with the count. Any unfixed tell makes
 the verdict REVISE.
+After the voice edit, confirm that the rewrite preserves the original conditions, completion
+states, ownership, uncertainty, and requested decision.
+Keep missing evidence visible in the verdict and evidence gaps; a shorter draft cannot resolve
+an UNKNOWN gate.
 ```
 
 Its inline voice-pass list keeps only the checks `ai-tells.md` does not cover: owner naming, `guess`/`hope`/`should`, peer-message length, and unsupported claims.
